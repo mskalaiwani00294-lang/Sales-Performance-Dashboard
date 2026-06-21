@@ -1,20 +1,20 @@
-# 📊 Project Title: : Sales Performance Dashboard
+# 📊 Project Title: Sales Performance Dashboard
 
 An interactive Power BI dashboard designed to analyze sales performance, track targets, and identify business growth opportunities
 
 ## 📑 Table of Contents
-* [Project Overview](#-project-overview)
-* [Data Sources & Architecture](#-data-sources--architecture)
-* [Data Transformation ETL](#-data-transformation-etl)
-* [Data Model DAX](#-data-model-dax)
-* [Dashboard Features](#-dashboard-features)
-* [Key Insights](#-key-insights)
-* [How To Use](#-how-to-use)
+* Project Overview
+* Data Sources & Architecture
+* Data Transformation (ETL)
+* Data Model & DAX
+* Dashboard Features
+* Key Insights
+* How To Use
 
 ---
 
 ## 🎯 Project Overview
-*Business Problem:
+Business Problem:
 The organization needs a centralized solution to monitor sales performance, compare actual sales against targets, and identify high-performing regions and products.
 
 Objective:
@@ -24,13 +24,11 @@ Target Audience:
 Sales Managers, Business Analysts, Regional Managers, and Executive Leadership.
 
 
-## 🗃️ Data Sources & Architecture
-* **Source Systems:** List sources like SQL Server, Salesforce, or local Excel files.
-* **Data Volume:** Note the rough row counts or timeframe covered.
-* **Storage Mode:** Specify if using Import, DirectQuery, or Composite mode.
 
-## ⚙️ Data Transformation (ETL)
-*- Microsoft Excel Sales Dataset
+## 🗃️ Data Sources & Architecture
+Source Systems:
+
+- Microsoft Excel Sales Dataset
 - Customer Data
 - Product Data
 - Sales Target Data
@@ -42,6 +40,28 @@ Data Volume:
 
 Storage Mode:
 Import Mode
+
+
+
+## ⚙️ Data Transformation (ETL)
+Tool Used:
+Power Query Editor
+
+Key Cleanups:
+
+- Removed duplicate records
+- Handled missing values
+- Changed data types
+- Merged sales and target tables
+- Created date hierarchy
+- Renamed columns for consistency
+
+Custom Functions:
+No custom M functions used.
+
+---
+
+
 
 ## 🧠 Data Model & DAX
 Model Type:
@@ -69,12 +89,10 @@ Total Orders = DISTINCTCOUNT(Sales[Order ID])
 Sales Variance = [Total Sales] - [Total Target]
 
 Achievement % = DIVIDE([Total Sales],[Total Target])*100
-
-
   ```
 
 ## 🖥️ Dashboard Features
-*Page 1: Sales Overview
+Page 1: Sales Overview
 
 - KPI Cards (Sales, Profit, Orders, Target Achievement)
 - Monthly Sales Trend
@@ -96,7 +114,7 @@ Design Theme:
 Professional blue-themed dashboard with interactive slicers, drill-through functionality, and responsive visuals.
 
 ## 💡 Key Insights
-*Trend A:
+Trend A:
 Technology category generated the highest sales revenue across all categories.
 
 Trend B:
@@ -116,11 +134,6 @@ Focus marketing efforts on high-performing categories and improve sales strategi
 3. Use slicers to filter by year, category, or region.
 4. Hover over visuals for detailed tooltips.
 5. Analyze trends and performance metrics to support business decisions.
-
----
-
-Developed Using: Microsoft Power BI Desktop
-Skills Demonstrated: Data Cleaning, Data Modeling, DAX, Data Visualization, Business Intelligence, Dashboard Design.
 
 
 
