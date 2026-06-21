@@ -1,70 +1,73 @@
+
+
+@ -1 +1,59 @@
+# PowerBI_readme-template
+# PowerBI_readme-template
+
 # 📊 Project Title: Sales Performance Dashboard
 
-An interactive Power BI dashboard designed to analyze sales performance, track targets, and identify business growth opportunities
-
+An interactive Power BI dashboard designed to analyze sales performance, track targets, and identify business growth opportunities.
 ## 📑 Table of Contents
-* Project Overview
-* Data Sources & Architecture
-* Data Transformation (ETL)
-* Data Model & DAX
-* Dashboard Features
-* Key Insights
-* How To Use
+*- Project Overview
+- Data Sources & Architecture
+- Data Transformation (ETL)
+- Data Model & DAX
+- Dashboard Features
+- Key Insights
+- How To Use
 
 ---
 
 ## 🎯 Project Overview
-Business Problem:
-The organization needs a centralized solution to monitor sales performance, compare actual sales against targets, and identify high-performing regions and products.
+Business Problem
 
-Objective:
-To provide actionable insights into sales trends, target achievement, profitability, and regional performance for better decision-making.
+The company has sales data stored in multiple files, making it difficult to analyze overall business performance.
 
-Target Audience:
-Sales Managers, Business Analysts, Regional Managers, and Executive Leadership.
+Objective
 
+To clean, transform, merge, and model the data in Power BI and create a structured dataset for reporting and decision-making.
 
+Target Audience
 
-## 🗃️ Data Sources & Architecture
-Source Systems:
-
-- Microsoft Excel Sales Dataset
-- Customer Data
-- Product Data
-- Sales Target Data
-
-Data Volume:
-
-- Approximately 10,000+ sales records
-- Time Period: 2019–2022
-
-Storage Mode:
-Import Mode
-
-
-
-## ⚙️ Data Transformation (ETL)
-Tool Used:
-Power Query Editor
-
-Key Cleanups:
-
-- Removed duplicate records
-- Handled missing values
-- Changed data types
-- Merged sales and target tables
-- Created date hierarchy
-- Renamed columns for consistency
-
-Custom Functions:
-No custom M functions used.
+- Business Managers
+- Sales Team
+- Data Analysts
+- Management Team
 
 ---
 
+## 🗃️ Data Sources & Architecture
+* Source Systems
 
+- List of Orders.csv
+- Order Details.csv
+- Sales Target.csv
+
+Data Volume
+
+- List of Orders: First 500 records
+- Order Details: Complete dataset
+- Sales Target: Monthly target data
+
+Storage Mode
+
+Import Mode
+
+
+## ⚙️ Data Transformation (ETL)
+* **Tool Used:** Power Query Editor.
+* **Key Cleanups:** List standard transformations applied to raw data (e.g., merging, unpivoting).
+* **Custom Functions:** Mention any customized M code scripts used.
 
 ## 🧠 Data Model & DAX
-Model Type:
+Tool Used
+
+Power Query Editor
+
+Key Cleanups
+
+- Imported CSV files
+- Model Type:
 Star Schema
 
 Fact Tables:
@@ -89,51 +92,86 @@ Total Orders = DISTINCTCOUNT(Sales[Order ID])
 Sales Variance = [Total Sales] - [Total Target]
 
 Achievement % = DIVIDE([Total Sales],[Total Target])*100
+
+
   ```
 
 ## 🖥️ Dashboard Features
-Page 1: Sales Overview
-
-- KPI Cards (Sales, Profit, Orders, Target Achievement)
-- Monthly Sales Trend
-- Sales by Category
-
-Page 2: Sales Performance Analysis
-
-- Actual vs Target Matrix
-- Scatter Chart (Sales vs Profit)
-- Performance by Category and Sub-Category
-
-Page 3: Geographic Analysis
-
-- Sales by City Map
-- Order Count by State Funnel Chart
-- Treemap for Sub-Category Sales Distribution
-
-Design Theme:
-Professional blue-themed dashboard with interactive slicers, drill-through functionality, and responsive visuals.
+* **Page 1: Overview:** High-level KPI cards and strategic macro trends.
+* **Page 2: Deep Dive:** Interactive granularity with cross-filtering matrices.
+* **Page 3: Performance:** Interactive drill-down features and customized tooltips.
+* **Design Theme:** Highlight custom color palettes, JSON themes, or accessibility choices.
 
 ## 💡 Key Insights
-Trend A:
-Technology category generated the highest sales revenue across all categories.
+Model Type
 
-Trend B:
-Several regions achieved sales targets, while a few states showed significant sales variance.
+Star Schema
 
-Trend C:
-A small number of sub-categories contributed a major share of total sales.
+Fact Tables
 
-Recommendation:
-Focus marketing efforts on high-performing categories and improve sales strategies in underperforming regions.
+- Order Details
+- Orders Data
+
+Dimension Tables
+
+- List of Orders
+- Sales Target
+
+Key Measures
+
+Total Amount = SUM('Orders Data'[Amount])
+
+Total Profit = SUM('Orders Data'[Profit])
+
+Profit Margin % = DIVIDE([Total Profit],[Total Amount],0)
+
+---
+
+🖥️ Dashboard Features
+
+Page 1: Sales Overview
+
+- Total Sales
+- Total Profit
+- Total Orders
+- Profit Margin KPI Cards
+
+Page 2: Category Analysis
+
+- Average Profit by Category
+- Total Amount by Sub-Category
+- Interactive Filters
+
+Page 3: Target Performance
+
+- Monthly Sales Target
+- Actual vs Target Comparison
+- Drill-down Analysis
+
+Design Theme
+
+Simple business theme with interactive slicers and charts for easy analysis.
+
+---
+
+💡 Key Insights
+
+Trend A
+
+Sales performance varies across categories, with some categories generating higher profits than others.
+
+Trend B
+
+Profit Margin analysis identifies loss-making and break-even orders for better decision-making.
+
+Recommendation
+
+Focus on high-profit categories, reduce loss-making products, and monitor monthly targets regularly to improve overall business performance.
+
+---
 
 
 
 ## 🚀 How To Use
-1. Open the ".pbix" file in Power BI Desktop.
-2. Refresh data using the Refresh button.
-3. Use slicers to filter by year, category, or region.
-4. Hover over visuals for detailed tooltips.
-5. Analyze trends and performance metrics to support business decisions.
-
-
-
+1. Open the Power BI (.pbix) file in Power BI Desktop.
+2. Refresh the data if the source files are updated.
